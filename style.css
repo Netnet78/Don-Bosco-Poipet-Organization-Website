@@ -110,7 +110,9 @@ body {
     margin: 0;
     padding: 0;
 }
-  
+:root {
+    --gradientBlue:linear-gradient(60deg,#1b007e,#0000ff,#0055ff, #0f98dc, #05d7f8);
+}
 .container {
 width: 80%;
 margin: 0 auto;
@@ -118,7 +120,7 @@ padding: 20px;
 }
 
 header {
-background: linear-gradient(60deg,#1b007e,#0000ff,#0055ff, #0f98dc, #05d7f8);
+background: var(--gradientBlue);
 color: #fff;
 padding: 20px 0;
 }
@@ -183,6 +185,7 @@ padding: 20px 0;
 
 .btn:hover {
     transform: scale(1.1);
+    background: var(--gradientBlue);
 }
 
 .btn a {
