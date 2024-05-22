@@ -122,7 +122,7 @@ padding: 20px;
 }
 
 header {
-    background: var(--gradientBlue);
+    background: var(--gradientReverseBlue);
     color: #fff;
     padding: 20px 0;
     position: static;
@@ -206,7 +206,7 @@ padding: 20px 0;
 }
 
 .links-section {
-    background-color: #1b007e;
+    background:var(--gradientBlue);
     color: white;
     display: flex;
 }
@@ -217,6 +217,7 @@ padding: 20px 0;
 }
 .logo-container img {
     margin-left: 30%;
+    margin-top: 50px;
 }
 
 .copyrightContainer {
@@ -252,6 +253,18 @@ padding: 20px 0;
     color: transparent; /* Hide the text color */
     position: relative;
 }
+.contact-container {
+    display: inline-flex;
+}
+.contact-container img {
+    height: 25px;
+    width: 25px;
+    margin-top: 14px;
+}
+.contact-container .address {
+    width: 400px;
+}
+
 
 
 
