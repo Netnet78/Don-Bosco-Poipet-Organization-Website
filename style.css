@@ -163,6 +163,8 @@ padding: 50px 0;
 padding: 50px 0;
 }
 
+
+
 footer {
 background-color: #333;
 color: #fff;
@@ -227,7 +229,7 @@ padding: 20px 0;
     display: flex;
     color: white;
     background: url(assets/innerpage.jpg);
-    
+    background-repeat: no-repeat;
 }
 .intro-container {
     flex-wrap:wrap;
