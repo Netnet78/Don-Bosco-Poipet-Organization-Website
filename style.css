@@ -113,6 +113,7 @@ body {
 }
 :root {
     --gradientBlue:linear-gradient(60deg,#1b007e,#0000ff,#0055ff, #0f98dc, #05d7f8);
+    --gradientReverseBlue: linear-gradient(-60deg, #1b007e,#0000ff,#0055ff, #0f98dc, #05d7f8);
 }
 .container {
 width: 80%;
@@ -224,7 +225,7 @@ padding: 20px 0;
 .intro-section {
     display: flex;
     color: white;
-    background: url(assets/001.jpg);
+    background: url(assets/innerpage.jpg);
     
 }
 .intro-container {
@@ -236,7 +237,25 @@ padding: 20px 0;
 .intro-text-container {
     padding: 50px 1;
     color: #f4f4f4;
-    text-align: right;
+    text-align: center;
     flex-wrap:wrap;
     margin-right: 50px;
+    position:relative;
+    overflow: hidden;
+    
 }
+
+.intro-text-container h3 {
+    background: var(--gradientReverseBlue);
+    -webkit-background-clip: text; /* Clip the background to the text */
+    background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Hide the text color */
+    position: relative;
+}
+
+
+
+
+
+
+

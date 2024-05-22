@@ -1,5 +1,5 @@
-const logoImage = document.getElementById("logo-img").innerHTML;
+const logoImage = document.getElementById("logo-img");
 function redirectToProject() {
-    window.open("netnet78.github.io");
+    window.open("https://netnet78.github.io/");
 };
 logoImage.addEventListener("click", redirectToProject);
