@@ -134,13 +134,13 @@ header h1 {
 }
 
 nav ul {
-list-style: none;
-padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 nav ul li {
-display: inline;
-margin-right: 20px;
+    display: inline;
+    margin-right: 20px;
 
 }
 
@@ -155,12 +155,12 @@ nav ul li:hover a {
 }
 
 .hero {
-background-color: #f4f4f4;
-padding: 50px 0;
+    background-color: #f4f4f4;
+    padding: 50px 0;
 }
 
 .about {
-padding: 50px 0;
+    padding: 50px 0;
 }
 
 
@@ -237,6 +237,9 @@ padding: 20px 0;
     color: white;
 
 }
+.intro-logo {
+    position: static;
+}
 .intro-text-container {
     padding: 50px 1;
     color: #f4f4f4;
@@ -245,7 +248,6 @@ padding: 20px 0;
     margin-right: 50px;
     position:relative;
     overflow: hidden;
-    
 }
 
 .intro-text-container h3 {
