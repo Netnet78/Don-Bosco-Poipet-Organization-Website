@@ -230,7 +230,7 @@ padding: 20px 0;
 .intro-section {
     display: flex;
     color: white;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/001.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/001.jpg');
     background-repeat: no-repeat;
 }
 .intro-container {
