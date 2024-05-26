@@ -114,6 +114,8 @@ body {
 :root {
     --gradientBlue:linear-gradient(60deg,#1b007e,#0000ff,#0055ff, #0f98dc, #05d7f8);
     --gradientReverseBlue: linear-gradient(-60deg, #1b007e,#0000ff,#0055ff, #0f98dc, #05d7f8);
+    --darken: linear-gradient((rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)));
 }
 .container {
 width: 80%;
@@ -228,7 +230,7 @@ padding: 20px 0;
 .intro-section {
     display: flex;
     color: white;
-    background: url(assets/innerpage.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/001.jpg');
     background-repeat: no-repeat;
 }
 .intro-container {
