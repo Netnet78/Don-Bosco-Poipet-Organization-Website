@@ -7,14 +7,14 @@ const RootLayout = ({children}: any) => {
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased p-0 m-0">
         <header>
           <nav>
             <a href="/">Home</a>
             <a href="/about">About</a>
           </nav>
         </header>
-        <main>{children}</main>
+        <main className="m-1">{children}</main>
         <PageFooter></PageFooter>
       </body>
     </html>
