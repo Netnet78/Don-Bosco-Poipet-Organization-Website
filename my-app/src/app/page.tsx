@@ -1,11 +1,8 @@
-import Image from 'next/image';
-import './page.module.css';
-
-const HomePage = () => {
+function HomePage(): any {
   return (
     <div>
       {/* HERO section */}
-      <section className="hero">
+      <section className='text-3xl font-bold underline'>
         <p>This is for testing</p>
       </section>
     </div>

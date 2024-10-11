@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es6", // Specifies ECMAScript target version
+    "module": "commonjs", // Use CommonJS for module system
+    "jsx": "preserve", // Set JSX support for React
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Enable compatibility with ES modules
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true // Ensure consistent file names
+    ,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "src/**/*",
+    ".next/types/**/*.ts"
+  ], // Include all files in src folder
+  "exclude": [
+    "node_modules",
+    "build"
+  ], // Exclude unnecessary folders
+  "css.lint.unknownAtRules": "ignore" // Ignore error
+}

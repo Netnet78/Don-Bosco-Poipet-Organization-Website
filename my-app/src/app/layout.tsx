@@ -1,13 +1,13 @@
-import localFont from "next/font/local";
 import "./globals.css";
+import PageFooter from "../components/footer";
 
-const RootLayout = ({children}) => {
+const RootLayout = ({children}: any) => {
   return (
     <html>
       <head>
-        <title>Don Bosco Organization Website</title>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body>
+      <body className="font-sans antialiased">
         <header>
           <nav>
             <a href="/">Home</a>
@@ -15,6 +15,7 @@ const RootLayout = ({children}) => {
           </nav>
         </header>
         <main>{children}</main>
+        <PageFooter></PageFooter>
       </body>
     </html>
   );
