@@ -34,6 +34,7 @@ git clone https://github.com/Netnet78/Don-Bosco-Poipet-Organization-Website.git
 cd Don-Bosco-Poipet-Organization-Website
 cd my-app
 ```
+> Note: Any folders other than "my-app" is not important unless if you want to preview the old version of the website
 2. Test and debug:
 ```bash
 npm run dev
