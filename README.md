@@ -6,7 +6,7 @@ This is the official website for Don Bosco Poipet, a school providing education 
 
 - **Responsive Design**: Tailored for both desktop and mobile devices using Tailwind CSS.
 - **Static Site Generation (SSG)** and **Incremental Site Generation (ISR)**: Optimized for performance and SEO.
-- **Navigation Bar with Dropdown**: Includes links to important pages like "Home," "About Us," "Programs," "Admissions," and more.
+- **Navigation Bar with Dropdown**: Includes links to important pages like "Home", "About Us", "Programs", "Admissions" and more.
 - **Interactive Elements**: Features tooltips, click-to-copy functionality for contact info, and more.
 - **Multilingual Support**: Planned support for multiple languages to serve the diverse of our local community.
 - **Open Source**: Contributions are welcome! Feel free to fork, suggest new features, or report bugs.
