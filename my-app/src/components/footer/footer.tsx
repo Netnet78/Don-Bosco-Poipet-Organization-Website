@@ -4,6 +4,7 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
+import Link from "next/link";
 import "./Footer.css";
 
 /* Footer Elements
@@ -39,9 +40,10 @@ const PageFooter = () => {
     return (
         <footer className="h-auto bg-slate-800 text-white flex flex-col items-center justify-between p-4 text-xs sm:text-sm md:text-base">
             {/* Address Section */}
-            <div className="flex flex-col items-center mx-auto w-full my-1 cursor-default">
-                <FontAwesomeIcon icon={faMapLocationDot} className="h-5 w-5 md:h-6 md:w-6 mb-1"/>
+            <div className="flex flex-col items-center mx-auto w-full my-1 cursor-default sm:justify-center">
+                <FontAwesomeIcon icon={faMapLocationDot} className="h-5 w-5 md:h-6 md:w-6 mb-1 block sm:hidden"/>
                 <div className="text-center p-1 w-auto mr-auto ml-auto">
+                    <FontAwesomeIcon icon={faMapLocationDot} className="h-5 w-5 md:h-6 md:w-6 m-0 sm:m-auto sm:mr-2 hidden sm:inline-block"/>
                     <b className="ml-0 mr-1">Mittapheap</b> Village,
                     <b className="ml-1 mr-1">Poipet</b> Commune,
                     <b className="ml-0 mr-1 inline">Poipet</b>City,
@@ -65,10 +67,10 @@ const PageFooter = () => {
                     <FontAwesomeIcon icon={faLink} className="h-4 w-4 ml-2"/>
                 </span>
                 <div className="flex flex-wrap justify-center space-x-3 mt-2 underline-animation">
-                    <a href="/" className="text-white">Home</a>
-                    <a href="/about_us_page" className="text-white">About Us</a>
-                    <a href="/programs_page" className="text-white">Programs</a>
-                    <a href="/admission_page" className="text-white">Admission</a>
+                    <Link href="/" className="text-white">Home</Link>
+                    <Link href="/about_us_page" className="text-white">About Us</Link>
+                    <Link href="/programs_page" className="text-white">Programs</Link>
+                    <Link href="/admission_page" className="text-white">Admission</Link>
                 </div>
             </div>
             

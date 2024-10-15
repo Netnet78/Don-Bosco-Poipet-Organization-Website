@@ -1,0 +1,131 @@
+/*** header.tsx ***/
+/** Navigation section **/
+
+/* The most important part! the mother of all elements */
+.body-of-nav {
+  @apply flex flex-wrap w-full
+  h-auto items-center p-2 overflow-hidden
+  bg-blue-700 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500
+}
+
+/* Navigation menu */
+.mobile-navigation-menu {
+  @apply fixed top-0 right-0 h-full w-64 z-50 transform
+  transition-transform duration-300 ease-in-out bg-blue-800
+  /* Display the hamburger menu */
+}
+
+.desktop-navigation-menu {
+  @apply flex-grow lg:flex justify-end items-end
+  /* Desktop display normal navigation menu no hamburger */
+}
+
+/* Navigation links container */
+.mobile-nav-links-container {
+  @apply flex flex-col mt-20;
+  /* Display by column (vertically) */
+}
+
+.desktop-nav-links-container {
+  @apply flex flex-row justify-end items-center
+  /* Display by row and align the text to the right */
+}
+
+/* Display mode for each devices */
+.mobile-links-display {
+  @apply block w-full px-4 py-2 text-left
+  /* If it's a mobile screen then display vertically */
+}
+
+.desktop-links-display {
+  @apply inline-block mx-2 my-0
+  /* If it's a desktop screen then display horizontally */
+}
+
+/* Extra properties */
+.hover-effect-support {
+  @apply relative z-10 px-4 lg:px-2 py-2 text-sm lg:text-base text-white transition-all duration-150
+}
+
+.black-overlay {
+  @apply fixed inset-0 z-40 bg-black bg-opacity-50;
+}
+
+/** Header section **/
+
+/* Main section mother of all elements */
+.mother-of-all-elements {
+  @apply flex flex-col xl:flex-row w-full h-auto 
+  items-start sm:items-center p-3 
+  overflow-hidden text-xs sm:text-sm 
+  bg-blue-950 text-white;
+}
+
+/* Information section */
+.information-container {
+  @apply flex flex-col xl:flex-row h-14 mb-2 sm:mb-4 xl:mb-0;
+}
+
+/* Phone number container including images and tooltip */
+.phone-number-container {
+  @apply flex items-center mb-2 xl:mb-0 xl:mr-4 sm:justify-center sm:text-center;
+}
+
+/* Tooltip for copying phone number */
+.phone-num-copy-tooltip {
+  @apply absolute -top-1/2 left-auto xl:top-full xl:left-0 w-1/2 xl:w-auto mt-1 p-1 text-xs 
+  bg-black text-white rounded;
+}
+
+/* Address container including images and tooltip */
+.address-container {
+  @apply flex items-center sm:justify-center sm:text-center;
+}
+
+/* Address tooltip for locate address directly */
+.address-locate-tooltip {
+  @apply absolute -top-1/2 left-auto xl:top-full xl:left-0 w-1/4 xl:w-auto mt-1 p-1 text-xs 
+  bg-black text-white rounded;
+}
+
+/* Actions buttons such as (Log in, Sign up, Contact us) */
+.action-btns {
+  @apply hidden sm:flex flex-wrap xl:flex-nowrap items-center xl:ml-auto space-y-2 xl:space-y-0 xl:space-x-3;
+}
+
+/* Contact button container to position the text */
+.contact-btn-container {
+  @apply flex w-full xl:w-auto sm:justify-center sm:items-center text-center;
+}
+
+/* Contact button */
+.contact-btn {
+  @apply flex justify-center items-center w-full sm:w-5/6 xl:w-auto 
+  lg:w-full px-6 py-3 text-center rounded-full 
+  transform xl:hover:scale-105 sm:hover:scale-95 
+  transition-all duration-300 bg-black hover:bg-white 
+  text-white hover:text-black font-bold
+}
+
+/* Log in and Sign up */
+.login-signup-container {
+  @apply flex w-full xl:w-auto sm:justify-center sm:items-center text-center;
+}
+
+/* Log in button */
+.login-btn {
+  @apply flex justify-center items-center w-full sm:w-1/3 xl:w-auto lg:w-full px-4 py-2 
+  mx-3 text-center rounded-full transform sm:hover:scale-95 xl:hover:scale-105 
+  transition-all duration-300 border-2 border-white hover:bg-blue-700;
+}
+
+
+/* Sign up button */
+.signup-btn {
+  @apply flex justify-center items-center w-full 
+  sm:w-1/3 xl:w-auto lg:w-full px-4 py-2 mx-3 
+  text-center rounded-full transform sm:hover:scale-95 
+  xl:hover:scale-105 transition-all duration-300 border-2 
+  border-white hover:bg-blue-700;
+}
+
