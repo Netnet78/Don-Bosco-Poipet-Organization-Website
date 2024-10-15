@@ -2,23 +2,26 @@
 "use client";
 
 // Importing necessary components and icons
+import useCheckDeviceSize from "../../utility/checkDeviceSize";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
 import "./Header.css";
-// @ts-ignore
-import flash from "./FlashBackground.module.css";
-// @ts-ignore
-import bau from "./BoxAndUnderline.module.css";
-// @ts-ignore
+// @ts-ignore (Flashing/Gradient background for the navigation)
+import flash from "./FlashBackground.module.css"; 
+// @ts-ignore (Box and underline animation)
+import bau from "./BoxAndUnderline.module.css"; 
 
+// Preload images
+library.add(faPhone, faLocationDot);
 
 // Main navigation component
-export default function Navigation() {
+export default function Navigation(): JSX.Element {
     // Check what is the current link
     const pathName = usePathname();
     // State for controlling mobile menu open/close
@@ -29,22 +32,11 @@ export default function Navigation() {
     const [initialCheckDone, setInitialCheckDone] = useState(false);
 
     // Effect to check and update screen size
-    useEffect(() => {
-        const checkScreenSize = () => {
-            // Set isMobile true if screen width is less than 1024px
-            setIsMobile(window.innerWidth < 1024);
-            // Set initialCheckDone to true after the initial check
-            setInitialCheckDone(true);
-        };
-
-        // Initial check
-        checkScreenSize();
-        // Add event listener for window resize
-        window.addEventListener('resize', checkScreenSize);
-
-        // Cleanup function to remove event listener
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
+    useCheckDeviceSize(setInitialCheckDone);
+    useCheckDeviceSize((isInitialCheckDone) => {
+        setInitialCheckDone(isInitialCheckDone);
+        setIsMobile(window.innerWidth < 1024);
+    });
 
     // Function to toggle mobile menu
     const toggleNav = () => {
@@ -92,6 +84,19 @@ export default function Navigation() {
                     <div className={`
                         ${isMobile ? 'mobile-nav-links-container' : 'desktop-nav-links-container'}
                     `}>
+                        {/* Login and Signup when on mobile */}
+                        <h3 className="text-white p-2 ml-2 lg:hidden">Are you our student?</h3>
+                        {isMobile && (
+                            <div className="inline-flex lg:hidden justify-evenly mx-2 mb-5 mt-1 p-2">
+                                <Link href="login" className="flex  mobile-login-btn">
+                                    <span>Log in</span>
+                                </Link>    
+                                <Link href="signup" className="flex mobile-signup-btn">
+                                    <span>Sign up</span>
+                                </Link>
+                            </div>
+                        )}
+                        <hr className="lg:hidden border-2 border-white my-0" />
                         {/* Map through navigation items to create links */}
                         {['Home', 'About Us', 'Programs', 'Admission', 'Get Involved', 'Blog', 'Contact'].map((item, index) => {
                             const href = item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '_')}_page`;
@@ -120,19 +125,30 @@ export default function Navigation() {
                                         {item}
                                     </span>
                                 </Link>
-                            );
+                            )
                         })}
+                        <hr className="lg:hidden border-2 border-white my-0" />
+                        {isMobile && (
+                            <div className="flex lg:hidden flex-col mx-2 mb-5 mt-1 p-2">
+                                <h3 className="mx-2 my-2 text-white">Have any questions?</h3>
+                                <Link href="contact_page" className="mobile-contact-us-btn">
+                                    <span>Contact Us</span>
+                                </Link>
+                            </div>
+                            )
+                        }
                     </div>
                 </nav>
             )}
+
             {/* Overlay for mobile menu when open */}
             {isMobile && isNavOpen && (
                 <div className="black-overlay" onClick={toggleNav}></div>
             )}
         </header>
-    );
+    )
 }
-export function Header() {
+export function Header({isMobile}: any) {
     // Define the phone number for the school
     const phoneNumber = "+855 78 581 695";
     // State to control the visibility of the phone number tooltip
@@ -217,16 +233,18 @@ export function Header() {
                     <h4>Are you our student?</h4>
                 </div>
                 {/* Log in and Signup buttons container */}
-                <div className="login-signup-container">
+                {!isMobile && (
+                    <div className="login-signup-container">
                     {/* Login button */}
-                    <a href="/login" className="login-btn">
+                    <Link href="/login" className="login-btn">
                         Log in
-                    </a>
+                    </Link>
                     {/* Signup button */}
-                    <a href="/signup" className="signup-btn">
+                    <Link href="/signup" className="signup-btn">
                         Sign up
-                    </a>
+                    </Link>
                 </div>
+                )}
             </div>
         </section>
     );

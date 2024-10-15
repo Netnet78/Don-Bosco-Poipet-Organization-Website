@@ -44,7 +44,8 @@
 
 /* Extra properties */
 .hover-effect-support {
-  @apply relative z-10 px-4 lg:px-2 py-2 text-sm lg:text-base text-white transition-all duration-150
+  @apply relative z-10 px-4 lg:px-2 py-2 text-sm lg:text-base 
+  text-white transition-all duration-150
 }
 
 .black-overlay {
@@ -90,7 +91,8 @@
 
 /* Actions buttons such as (Log in, Sign up, Contact us) */
 .action-btns {
-  @apply hidden sm:flex flex-wrap xl:flex-nowrap items-center xl:ml-auto space-y-2 xl:space-y-0 xl:space-x-3;
+  @apply hidden lg:flex flex-wrap xl:flex-nowrap items-center xl:ml-auto space-y-2 
+  xl:space-y-0 xl:space-x-3;
 }
 
 /* Contact button container to position the text */
@@ -106,6 +108,10 @@
   transition-all duration-300 bg-black hover:bg-white 
   text-white hover:text-black font-bold
 }
+.mobile-contact-us-btn {
+  @apply flex justify-center items-center w-auto sm:w-5/6 xl:w-auto bg-black
+  rounded-full text-white mx-auto p-3 hover:scale-105 transition-all duration-300
+}
 
 /* Log in and Sign up */
 .login-signup-container {
@@ -118,14 +124,22 @@
   mx-3 text-center rounded-full transform sm:hover:scale-95 xl:hover:scale-105 
   transition-all duration-300 border-2 border-white hover:bg-blue-700;
 }
+.mobile-login-btn {
+  @apply flex justify-center items-center mx-1 p-2 w-full text-white rounded-full
+  border-2 border-white hover:bg-blue-300 transition-colors duration-300
+}
 
 
 /* Sign up button */
 .signup-btn {
-  @apply flex justify-center items-center w-full 
+  @apply flex justify-center items-center w-full
   sm:w-1/3 xl:w-auto lg:w-full px-4 py-2 mx-3 
   text-center rounded-full transform sm:hover:scale-95 
   xl:hover:scale-105 transition-all duration-300 border-2 
   border-white hover:bg-blue-700;
 }
-
+.mobile-signup-btn {
+  @apply flex justify-center items-center mx-1 p-2 w-full text-white rounded-full
+  border-2 border-white bg-blue-300 hover:bg-black hover:text-white 
+  transition-colors duration-300;
+}
