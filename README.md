@@ -1,3 +1,10 @@
+<div style="display:flex;">
+  <a href="https://github.com/Netnet78/Don-Bosco-Poipet-Organization-Website/blob/main/README_KH.md">
+    <img width="48" height="48" src="https://img.icons8.com/color/48/cambodia.png" alt="cambodia"/>
+  </a>
+  <p>Click here for <a href="https://github.com/Netnet78/Don-Bosco-Poipet-Organization-Website/blob/main/README_KH.md">Khmer translatation</a></p>
+</div>
+
 # Don Bosco Poipet School Website
 
 This is the official website for Don Bosco Poipet, a school providing education from Grades 1 to 12 as well as technical high school programs in Poipet, Cambodia. The goal of this project is to create a modern, responsive, and user-friendly website to showcase the school's programs, admissions, and activities. 
