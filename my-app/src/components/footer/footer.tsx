@@ -71,6 +71,9 @@ const PageFooter = () => {
                     <Link href="/about_us_page" className="text-white">About Us</Link>
                     <Link href="/programs_page" className="text-white">Programs</Link>
                     <Link href="/admission_page" className="text-white">Admission</Link>
+                    <Link href="/get_involved_page" className="text-white">Get Involved</Link>
+                    <Link href="/blog_page" className="text-white">Blog</Link>
+                    <Link href="/contact_page" className="text-white">Contact</Link>
                 </div>
             </div>
             
@@ -86,7 +89,7 @@ const PageFooter = () => {
             </div>
             
             {/* Copyright Section */}
-            <div className="flex items-center justify-center mt-3 p-2 w-full md:w-1/2 border-2">
+            <div className="flex items-center justify-center mt-3 p-2 w-4/5 border-2">
                 <h4 className="text-center cursor-default">© {currentYear} Don Bosco Poipet. All rights reserved.</h4>
             </div>
         </footer>
