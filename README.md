@@ -24,6 +24,7 @@ This is the school/organization website for Don Bosco Poipet, a school providing
 - **Tailwind CSS**: For styling and responsive design.
 - **Font Awesome**: For icons.
 - **TypeScript**: For better type safety and readability.
+- **PocketBase:** For handling data manipulation.
 
 ## Getting Started
 
