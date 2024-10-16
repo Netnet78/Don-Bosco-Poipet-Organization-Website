@@ -1,3 +1,10 @@
+<div>
+  <a href="https://github.com/Netnet78/Don-Bosco-Poipet-Organization-Website/blob/main/README.md">
+    <img width="48" height="48" src="https://img.icons8.com/color/48/usa.png" alt="usa"/>
+  </a>
+  <p><a href="https://github.com/Netnet78/Don-Bosco-Poipet-Organization-Website/blob/main/README.md">បកប្រែជាភាសាអង់គ្លេសវិញ</a></p>
+</div>
+
 # សាលាចំណេះទូទៅនឹង បច្ចេកទេសឯកជន ដុនបូស្កូប៉ោយប៉ែត
 នេះជាគេហទំព័ររបស់សាលាដុនបូស្កូប៉ោយប៉ែត ដែលជាសាលាផ្តល់ការអប់រំចាប់ពីថ្នាក់ទី ១ ដល់ទី ១២ ព្រមទាំងកម្មវិធីវិទ្យាល័យបច្ចេកទេសក្នុងក្រុងប៉ោយប៉ែត ផងដែរ។ 
 គោលបំណងនៃគម្រោងនេះគឺដើម្បីបង្កើតគេហទំព័រទំនើប ដែលអាចឆ្លើយតបទៅនឹងអ្នកប្រើប្រាស់ និងងាយស្រួលប្រើ ដើម្បីបង្ហាញព័ត៌មានពីការចូលរៀន និងសកម្មភាពរបស់សាលា។
