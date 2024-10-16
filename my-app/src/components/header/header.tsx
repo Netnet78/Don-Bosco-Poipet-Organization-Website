@@ -10,6 +10,7 @@ import Link from "next/link";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import {faFacebook, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import { usePathname } from "next/navigation";
 import "./Header.css";
 // @ts-ignore (Flashing/Gradient background for the navigation)
@@ -71,14 +72,24 @@ export default function Navigation(): JSX.Element {
                     ${isMobile ? 'mobile-navigation-menu' : 'desktop-navigation-menu'}
                     ${isMobile && isNavOpen ? 'translate-x-0' : isMobile ? 'translate-x-full' : ''}
                 `}>
-                    {/* Close button for mobile menu */}
+                   {/* Close button for mobile menu */}
+                    {isMobile && (
+                        <div className="absolute top-8 left-4 space-x-2 text-base text-white">
+                            <a href="https://web.facebook.com/donboscocenterpoipet" target="_blank" rel="noopener noreferrer" >
+                                <FontAwesomeIcon icon={faFacebook} className="m-1 w-5 h-5"></FontAwesomeIcon> 
+                            </a>
+                            <a href="https://www.youtube.com/channel/UCu8lJrOjfnKtummPuJoGEcg/featured" target="_blank" rel="noopener noreferrer" >
+                                <FontAwesomeIcon icon={faYoutube} className="m-1 w-5 h-5"></FontAwesomeIcon> 
+                            </a>
+                        </div>
+                   )}
                     {isMobile && (
                         <button
                             onClick={toggleNav}
                             className="absolute top-8 right-8 text-white text-base"
                         >
                             ✕
-                        </button>
+                        </button> 
                     )}
                     {/* Navigation links container */}
                     <div className={`

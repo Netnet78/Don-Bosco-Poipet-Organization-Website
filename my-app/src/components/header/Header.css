@@ -109,7 +109,7 @@
   text-white hover:text-black font-bold
 }
 .mobile-contact-us-btn {
-  @apply flex justify-center items-center w-auto sm:w-5/6 xl:w-auto bg-black
+  @apply flex justify-center items-center w-full sm:w-5/6 xl:w-auto bg-black
   rounded-full text-white mx-auto p-3 hover:scale-105 transition-all duration-300
 }
 
