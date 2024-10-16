@@ -7,7 +7,7 @@
 
 # Don Bosco Poipet School Website
 
-This is the official website for Don Bosco Poipet, a school providing education from Grades 1 to 12 as well as technical high school programs in Poipet, Cambodia. The goal of this project is to create a modern, responsive, and user-friendly website to showcase the school's programs, admissions, and activities. 
+This is the school/organization website for Don Bosco Poipet, a school providing education from Grades 1 to 12 as well as technical high school programs in Poipet, Cambodia. The goal of this project is to create a modern, responsive, and user-friendly website to showcase the school's programs, admissions, and activities. 
 
 ## Features
 
