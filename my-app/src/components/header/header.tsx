@@ -14,9 +14,9 @@ import {faFacebook, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import { usePathname } from "next/navigation";
 import "./Header.css";
 // @ts-ignore (Flashing/Gradient background for the navigation)
-import flash from "./FlashBackground.module.css"; 
+import flash from "./FlashBackground.module.css";
 // @ts-ignore (Box and underline animation)
-import bau from "./BoxAndUnderline.module.css"; 
+import bau from "./BoxAndUnderline.module.css";
 
 // Preload images
 library.add(faPhone, faLocationDot);
@@ -46,7 +46,7 @@ export default function Navigation(): JSX.Element {
 
     return (
         // Header container with gradient background and flex layout
-        <header className={`body-of-nav ${flash.error}`}>
+        <header className={`body-of-nav ${flash.error} static`}>
             {/* Logo image, responsive size */}
             <Image
                 src="/images/dbs-white-fill.png"
@@ -76,10 +76,10 @@ export default function Navigation(): JSX.Element {
                     {isMobile && (
                         <div className="absolute top-8 left-4 space-x-2 text-base text-white">
                             <a href="https://web.facebook.com/donboscocenterpoipet" target="_blank" rel="noopener noreferrer" >
-                                <FontAwesomeIcon icon={faFacebook} className="m-1 w-5 h-5"></FontAwesomeIcon> 
+                                <FontAwesomeIcon icon={faFacebook} className="m-1 w-5 h-5"></FontAwesomeIcon>
                             </a>
                             <a href="https://www.youtube.com/channel/UCu8lJrOjfnKtummPuJoGEcg/featured" target="_blank" rel="noopener noreferrer" >
-                                <FontAwesomeIcon icon={faYoutube} className="m-1 w-5 h-5"></FontAwesomeIcon> 
+                                <FontAwesomeIcon icon={faYoutube} className="m-1 w-5 h-5"></FontAwesomeIcon>
                             </a>
                         </div>
                    )}
@@ -89,7 +89,7 @@ export default function Navigation(): JSX.Element {
                             className="absolute top-8 right-8 text-white text-base"
                         >
                             ✕
-                        </button> 
+                        </button>
                     )}
                     {/* Navigation links container */}
                     <div className={`
@@ -101,7 +101,7 @@ export default function Navigation(): JSX.Element {
                             <div className="inline-flex lg:hidden justify-evenly mx-2 mb-5 mt-1 p-2">
                                 <Link href="login" className="flex  mobile-login-btn">
                                     <span>Log in</span>
-                                </Link>    
+                                </Link>
                                 <Link href="signup" className="flex mobile-signup-btn">
                                     <span>Sign up</span>
                                 </Link>
@@ -115,9 +115,9 @@ export default function Navigation(): JSX.Element {
                             const desktopStyle = `border-b-2 border-white`;
                             let isActive = pathName === href;
                             return (
-                                <Link 
-                                key={index} 
-                                href={href} 
+                                <Link
+                                key={index}
+                                href={href}
                                 className={`
                                     relative group
                                     ${isMobile ? 'mobile-links-display' : 'desktop-links-display'}
@@ -130,7 +130,7 @@ export default function Navigation(): JSX.Element {
                                             window.location.href = href;
                                         }, 500);
                                     }
-                                }}> 
+                                }}>
                                     {/* Navigation link text with hover animation */}
                                     <span className={`hover-effect-support ${bau.boxAnimation} ${isActive ? isMobile ? `${mobileStyle}` : `${desktopStyle}` : ''}`}>
                                         {item}
@@ -183,7 +183,7 @@ export function Header({isMobile}: any) {
 
     // Function to open Google Maps with the school's location
     const redirectToURL = () => {
-        window.open("https://www.google.com/maps/dir//MH7F%2BJJP,+Krong+Poi+Pet/@13.6698677,102.5808242,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x311b16df76e8707b:0xc210610f792918d0!2m2!1d102.5740588!2d13.6640953?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D", "_blank")
+        window.open("https://www.google.com/maps/dir//MH7F%2BJJP,+Krong+Poi+Pet/@13.6640718,102.5737171,18.67z/data=!4m8!4m7!1m0!1m5!1m1!1s0x311b16df76e8707b:0xc210610f792918d0!2m2!1d102.5740588!2d13.6640953?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D", "_blank")
     };
 
     return (
@@ -197,7 +197,7 @@ export function Header({isMobile}: any) {
                     {/* Phone icon */}
                     <FontAwesomeIcon icon={faPhone} className="w-5 h-5 mr-2" />
                     {/* Phone number text with click-to-copy functionality and tooltip */}
-                    <h4 
+                    <h4
                         onClick={copyToClipboard}
                         onMouseOver={() => setShowTooltip(true)}
                         onMouseLeave={() => setShowTooltip(false)}
@@ -215,7 +215,7 @@ export function Header({isMobile}: any) {
                     {/* Location icon */}
                     <FontAwesomeIcon icon={faLocationDot} className="w-5 h-5 mr-2"/>
                     {/* Address text with click-to-redirect functionality and tooltip */}
-                    <h4 
+                    <h4
                         className="relative cursor-pointer"
                         onMouseOver={() => setShow(true)}
                         onMouseLeave={() => setShow(false)}
