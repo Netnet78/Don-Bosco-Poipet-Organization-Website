@@ -13,6 +13,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "babel": "^5.8.38",
     "next": "^14.2.15",
     "nextjs": "^0.0.3",
     "pnpm": "^9.12.0",
