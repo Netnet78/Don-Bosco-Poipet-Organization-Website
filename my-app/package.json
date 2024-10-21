@@ -13,21 +13,21 @@
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "babel": "^5.8.38",
     "next": "^14.2.15",
     "nextjs": "^0.0.3",
     "pnpm": "^9.12.0",
     "pocketbase": "^0.21.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "babel": "^6.23.0"
   },
   "devDependencies": {
     "@types/node": "22.7.5",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.14",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13"
